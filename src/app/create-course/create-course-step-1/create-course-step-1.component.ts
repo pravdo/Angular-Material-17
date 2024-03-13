@@ -2,6 +2,9 @@ import { Component } from "@angular/core";
 import { UntypedFormBuilder, Validators } from "@angular/forms";
 import { MatCalendarCellClassFunction } from "@angular/material/datepicker";
 
+const SAMPLE_TEXT =
+  "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which do";
+
 @Component({
   selector: "create-course-step-1",
   templateUrl: "create-course-step-1.component.html",
@@ -17,7 +20,10 @@ export class CreateCourseStep1Component {
     category: ["BEGINNER", Validators.required],
     courseType: ["premium", Validators.required],
     downloadsAllowed: [false, Validators.requiredTrue],
-    longDescription: ["", [Validators.required, Validators.minLength(3)]],
+    longDescription: [
+      `${SAMPLE_TEXT}`,
+      [Validators.required, Validators.minLength(3)],
+    ],
   });
 
   dateClass: MatCalendarCellClassFunction<Date> = (cellDate, view) => {
