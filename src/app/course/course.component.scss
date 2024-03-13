@@ -1,14 +1,23 @@
-
 .course {
-    text-align: center;
-    width: 390px;
-    margin: 40px auto;
+  text-align: center;
+  width: 390px;
+  margin: 40px auto;
 }
 
 .course-thumbnail {
   width: 150px;
   margin: 20px auto 0 auto;
   display: block;
+}
+
+// .scrolling-container {
+// max-height: 250px;
+// max-width: 200px;
+// overflow: auto;
+// }
+
+.collapsed-detail {
+  display: none;
 }
 
 .description-cell {
@@ -62,7 +71,7 @@ mat-paginator {
 }
 
 .mat-column-description {
-  padding-left:20px;
+  padding-left: 20px;
   text-align: left;
 }
 
