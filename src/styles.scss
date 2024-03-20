@@ -1,8 +1,29 @@
 @use "@angular/material" as mat;
 /* You can add global styles to this file, and also import other style files */
 
-@import "@angular/material/prebuilt-themes/indigo-pink.css";
+@include mat.core();
 
+$dark-primary-text: rgba(black, 0.88);
+$light-primary-text: white;
+
+$mat-primary: (
+  50: #e8eaf6,
+  100: #c5cae9,
+  700: #303f9f,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    700: $light-primary-text,
+  ),
+);
+
+$primary: mat.define-palette($mat-primary);
+
+$theme: mat.define-light-theme($pprimary); // + $accent
+
+@include mat.all-component-theme($theme);
+
+// @import "@angular/material/prebuilt-themes/indigo-pink.css";
 @import "./mixins";
 
 @include responsive-dialogs();
