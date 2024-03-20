@@ -48,6 +48,7 @@ export function openEditCourseDialog(dialog: MatDialog, course: Course) {
 
   config.disableClose = true;
   config.autoFocus = true;
+  config.panelClass = "modal-panel";
 
   config.data = {
     ...course,
